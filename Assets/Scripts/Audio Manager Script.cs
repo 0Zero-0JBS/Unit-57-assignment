@@ -44,10 +44,10 @@ public class AudioManagerScript : MonoBehaviour
 
    
    
-    public void PlayClip(string name)
+    public void PlayClip(int clipNumber)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.Play();
+        //audioSource = GetComponent<AudioSource>();
+        //audioSource.PlayOneShot(clips[clipNumber], 0.7f); // start clip
     }
     public void StopClip()
     {
