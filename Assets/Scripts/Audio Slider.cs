@@ -11,12 +11,6 @@ public class AudioSlider : MonoBehaviour
     private TMPro.TextMeshProUGUI ValueText;
     [SerializeField]
     private AudioMixMode MixMode;
-    [SerializeField]
-    private AudioSource AudioSource1;
-    [SerializeField]
-    private AudioSource AudioSource2;
-    [SerializeField]
-    private AudioSource AudioSource3;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
