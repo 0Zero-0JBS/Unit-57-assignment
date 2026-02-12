@@ -39,7 +39,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SFX
+  m_Name: Sfx
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 964dcd7c18474a14595a65e0eaacdfae
   m_Children: []
@@ -136,6 +136,22 @@ AudioMixerEffectController:
   m_EffectName: Attenuation
   m_MixLevel: 5e356a02ee4711d4a82b6fa37f6761ca
   m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &8358672884798375971
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: ad90c821bafe1284ba649656083fccd6
+  m_EffectName: Lowpass Simple
+  m_MixLevel: 97e84c9cfd7354747950a27f8d0e75c9
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: f8f937b7ba64a56499c18374e53c660c
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
