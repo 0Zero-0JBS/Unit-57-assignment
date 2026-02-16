@@ -593,7 +593,7 @@ AudioSource:
   m_GameObject: {fileID: 225013706}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1300209750422838773, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 43a225fbb4fe94549aa24e74807a7326, type: 3}
   m_PlayOnAwake: 0
@@ -755,18 +755,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 225013708}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1035,7 +1023,7 @@ GameObject:
   - component: {fileID: 277872473}
   - component: {fileID: 277872475}
   - component: {fileID: 277872474}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Corner 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1098,7 @@ GameObject:
   - component: {fileID: 428826892}
   - component: {fileID: 428826894}
   - component: {fileID: 428826893}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Bar 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1211,7 @@ AudioSource:
   m_GameObject: {fileID: 459313483}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1300209750422838773, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 43a225fbb4fe94549aa24e74807a7326, type: 3}
   m_PlayOnAwake: 0
@@ -1371,18 +1359,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 459313485}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1557,7 +1533,7 @@ AudioSource:
   m_GameObject: {fileID: 650943562}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1300209750422838773, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 43a225fbb4fe94549aa24e74807a7326, type: 3}
   m_PlayOnAwake: 0
@@ -1706,18 +1682,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1583383197}
         m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
         m_MethodName: GoToMainMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 650943564}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1897,6 +1861,7 @@ GameObject:
   - component: {fileID: 764903564}
   - component: {fileID: 764903563}
   - component: {fileID: 764903562}
+  - component: {fileID: 764903565}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1978,6 +1943,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764903565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764903561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &780667211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2112,7 @@ AudioSource:
   m_GameObject: {fileID: 804352614}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1300209750422838773, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 43a225fbb4fe94549aa24e74807a7326, type: 3}
   m_PlayOnAwake: 0
@@ -2252,18 +2261,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1583383197}
         m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
         m_MethodName: QuitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 804352616}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2728,24 +2725,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManagerScript
   sounds:
-  - name: game music
+  - name: Main Menu Music
     clip: {fileID: 8300000, guid: f9be7f046e954c84baab7b413faae6e3, type: 3}
     volume: 1
     pitch: 0
     source: {fileID: 0}
-    mixer: {fileID: 0}
-  - name: ButtonPress
-    clip: {fileID: 0}
+    mixer: {fileID: -3696465799718436485, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
+  - name: Button Sound
+    clip: {fileID: 8300000, guid: 43a225fbb4fe94549aa24e74807a7326, type: 3}
     volume: 1
     pitch: 0
     source: {fileID: 0}
-    mixer: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+    mixer: {fileID: -1300209750422838773, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
+  - name: Game Music
+    clip: {fileID: 8300000, guid: 7ef9b18073eb792488f6c08136dcb652, type: 3}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
   musicVolume: 0
   sfxVolume: 0
 --- !u!4 &1070845637
@@ -2934,7 +2931,7 @@ GameObject:
   - component: {fileID: 1243726729}
   - component: {fileID: 1243726731}
   - component: {fileID: 1243726730}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Corner 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3870,7 +3867,7 @@ GameObject:
   - component: {fileID: 1550292949}
   - component: {fileID: 1550292951}
   - component: {fileID: 1550292950}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Corner 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4081,7 +4078,7 @@ GameObject:
   - component: {fileID: 1576455218}
   - component: {fileID: 1576455220}
   - component: {fileID: 1576455219}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Bar 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4389,15 +4386,15 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 277872473}
+  - {fileID: 1243726729}
+  - {fileID: 1550292949}
+  - {fileID: 1981097391}
+  - {fileID: 428826892}
+  - {fileID: 1576455218}
   - {fileID: 1474586543}
   - {fileID: 5108058}
   - {fileID: 1615333898}
-  - {fileID: 1576455218}
-  - {fileID: 428826892}
-  - {fileID: 1981097391}
-  - {fileID: 1550292949}
-  - {fileID: 1243726729}
-  - {fileID: 277872473}
   - {fileID: 143935880}
   - {fileID: 2013013398}
   m_Father: {fileID: 0}
@@ -4896,7 +4893,7 @@ AudioSource:
   m_GameObject: {fileID: 1646809902}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1300209750422838773, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 43a225fbb4fe94549aa24e74807a7326, type: 3}
   m_PlayOnAwake: 0
@@ -5058,18 +5055,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1646809904}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5900,7 +5885,7 @@ GameObject:
   - component: {fileID: 1981097391}
   - component: {fileID: 1981097393}
   - component: {fileID: 1981097392}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Corner 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6482,7 +6467,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052335852}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6503,10 +6488,10 @@ AudioSource:
   m_GameObject: {fileID: 2052335852}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1300209750422838773, guid: 93b769b60f912ec4c8e61d0c2528426b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 43a225fbb4fe94549aa24e74807a7326, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6673,18 +6658,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2052335854}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &2052335857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6729,7 +6702,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 764903564}
   - {fileID: 2041552142}
-  - {fileID: 1583383203}
-  - {fileID: 1427950842}
-  - {fileID: 1070845637}
   - {fileID: 1063183325}
+  - {fileID: 1070845637}
+  - {fileID: 1427950842}
+  - {fileID: 1583383203}
