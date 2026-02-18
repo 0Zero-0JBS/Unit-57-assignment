@@ -1,55 +1,50 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioSlider : MonoBehaviour
 {
-    [SerializeField]
-    private AudioMixer Mixer;
-    [SerializeField]
-    private AudioSource AudioSource;
-    [SerializeField]
-    private TMPro.TextMeshProUGUI ValueText;
-    [SerializeField]
-    private AudioMixMode MixMode;
+    [SerializeField] MusicSlider musicSlider;
+    [SerializeField] SfxSlider sfxSlider;
+    [SerializeField] AudioMixer music;
+    [SerializeField] AudioMixer sfx;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SetVolume(PlayerPrefs.GetFloat("SavedMusicVolume", 100));
+        SetVolume(PlayerPrefs.GetFloat("SavedSfxVolume", 100));
+    }
 
+    public void SetVolume(float _value)
+    {
+        if(_value < 1)
+        {
+            _value = .001f;
+        }
+
+        RefreshSlider(_value);
+        PlayerPrefs.SetFloat("SavedMusicVolume", _value);
+        music.SetFloat("MusicVolume", Mathf.Log10(-value / 100) * 20f);
+        PlayerPrefs.SetFloat("SavedSfxVolume", _value);
+        sfx.SetFloat("SfxVolume", Mathf.Log10(-value / 100) * 20f);
+    }
+
+    public void SetVolumeFromSlider()
+    {
+        SetVolume(musicSlider.value);
+        SetVolume(sfxSlider.value);
+    }
+
+    public void RefreshSlider(float _value)
+    {
+        musicSlider.value = _value;
+        sfxSlider.value = _value;
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public enum AudioMixMode
-    {
-        LinearAudioSourceVolume,
-        LinearMixerVolume,
-        LogrithmicMixerVolume
-    }
-    public void OnChangeSlider(float Value)
-    {
-        ValueText.SetText($"{Value.ToString("N4")}");
-
-        switch (MixMode)
-        {
-            case AudioMixMode.LinearAudioSourceVolume:
-                AudioSource.volume = Value;
-                break;
-            case AudioMixMode.LinearMixerVolume:
-                Mixer.SetFloat("Volume", (-80 + Value * 100));
-                break;
-            case AudioMixMode.LogrithmicMixerVolume:
-                Mixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
-                break;
-        }
-
-        PlayerPrefs.SetFloat("Music Volume", Value);
-        PlayerPrefs.Save();
-
-        Mixer.SetFloat("Volume", Mathf.Log10(PlayerPrefs.GetFloat("Volume", 1) * 20));
     }
 }
