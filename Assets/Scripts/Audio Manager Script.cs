@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
+UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class AudioManagerScript : MonoBehaviour
     public Sound[] sounds;
 
     public float musicVolume, sfxVolume;
+
+    [SerializeField] Slider musicSlider;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,9 +43,32 @@ public class AudioManagerScript : MonoBehaviour
             s.source.outputAudioMixerGroup = s.mixer;
         }
 
+        if(!PlayerPrefs.HasKey("musicVolume"))
+        {
+            PlayerPrefs.SetFloat("musicVolume", 1);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
     }
 
-   
+    public void ChangeVolume()
+    {
+        AudioListener.volume = volumeSlider.value;
+        Save();
+    }
+
+    private void Load()
+    {
+        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+    }
    
     public void PlayClip(int clipNumber)
     {
